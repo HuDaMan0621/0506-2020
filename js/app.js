@@ -46,8 +46,7 @@ function cardInfo (cardInformation){
             let eatInfoJSON = JSON.stringify(data); 
             sessionStorage.setItem('eatInfo', eatInfoJSON);//takes the poi data and save in the session storage
             // console.log()
-            const eatInfoPassJSON = sessionStorage.getItem('eatInfo');
-            const eatInfo = JSON.parse(eatInfoPassJSON);
+           
     
             // const title = ("Top Eats: ");
             cardDiv.innerHTML = createCards(eatInfo);

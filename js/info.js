@@ -1,6 +1,7 @@
 const userInformation = sessionStorage.getItem('userInformation');
 const travelInfo = JSON.parse(userInformation);
-
+const eatInfoPassJSON = sessionStorage.getItem('eatInfo');
+const eatInfo = JSON.parse(eatInfoPassJSON);
 // console.log(eatInfo);
 
 
@@ -17,21 +18,17 @@ locationStatus(travelInfo);
 
 
 
-function createCards(eatInfo) {
-    // console.log(dataTry.results[0].name)
-    // const cardTitle = dataTry.results;
-    // console.log(cardTitle);  
-    // console.log(eatInfo);
-
-    console.log(eatInfo.results);
-    const renderCards = eatInfo.results.map(card => {
-        return 
-        `
+function createCards(eatInfo) { 
+    console.log("ssssssssss");
+    console.log(eatInfo.results[0].name);
+    let renderCards = eatInfo.results.map((card) => {
+        console.log(card)
+        return `
         <div class="card">
-            <h3>${title}</h3>
+            <h3></h3>
             <div class="card-info">
                 <ul class="info-1">
-                    <li>Name: <span class="name-span1">${card.results[0].name}</span></li>
+                    <li>Name: <span class="name-span1">${card.name}</span></li>
                     <li>Price Tier: <span class="price-span1">2</span></li>
                     <li>Score: <span class="score-span1">3.2</span></li>
                 </ul>
@@ -49,8 +46,13 @@ function createCards(eatInfo) {
         </div>
         `
     })
+    console.log(eatInfo);
     return renderCards.join('');
+
 }
+let cardInfos = document.querySelector('.card-info')
+console.log("1111111111"+cardInfos);
+cardInfos.innerHTML = createCards(eatInfo);
 
 
 
