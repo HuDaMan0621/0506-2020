@@ -29,18 +29,8 @@ function createCards(eatInfo) {
             <div class="card-info">
                 <ul class="info-1">
                     <li>Name: <span class="name-span1">${card.name}</span></li>
-                    <li>Price Tier: <span class="price-span1">2</span></li>
-                    <li>Score: <span class="score-span1">3.2</span></li>
-                </ul>
-                <ul class="info-2">
-                    <li>Name: <span class="name-span2">Site 1</span></li>
-                    <li>Price Tier: <span class="tier-span2">2</span></li>
-                    <li>Score: <span class="score-span2">3.2</span></li>
-                </ul>
-                <ul class="info-3">
-                    <li>Name: <span class='name-span3'>Site 1</span></li>
-                    <li>Price Tier: <span class='price-span3'>2</span></li>
-                    <li>Score: <span class='score-span3'>3.2</span></li>
+                    <li>Price Tier: <span class="price-span1">${card.price_tier}</span></li>
+                    <li>Score: <span class="score-span1">${card.score.toFixed(1)}</span></li>
                 </ul>
             </div>
         </div>
